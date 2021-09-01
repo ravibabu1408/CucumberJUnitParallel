@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TestNGFrameWork</td>
+        <td>1</td>
+      <td>01 Sep 2021, 16:17</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">parallel.StepDefinition.i_clicked_on_signin_link_on_homepage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1989954700">1.989</td>
+              <td class="duration" data-value="1989954700">1.989</td>
+              <td class="duration" data-value="1989954700">1.989</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefinition.i_enter_email_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="92018600">0.092</td>
+              <td class="duration" data-value="92018600">0.092</td>
+              <td class="duration" data-value="92018600">0.092</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefinition.i_launch_the_zoho(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2272098100">2.272</td>
+              <td class="duration" data-value="2272098100">2.272</td>
+              <td class="duration" data-value="2272098100">2.272</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefinition.in_enter_password_as(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="5255894200">5.255</td>
+              <td class="duration" data-value="5255894200">5.255</td>
+              <td class="duration" data-value="5255894200">5.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefinition.landing_page_should_be_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="999800">0.000</td>
+              <td class="duration" data-value="999800">0.000</td>
+              <td class="duration" data-value="999800">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefinition2.i_click_on_nex_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="76518100">0.076</td>
+              <td class="duration" data-value="76518100">0.107</td>
+              <td class="duration" data-value="153036200">0.153</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.i_click_on_login_button()</td>
+              <td>9</td>
+              <td class="duration" data-value="3449543677">3.449</td>
+              <td class="duration" data-value="3449543677">4.315</td>
+              <td class="duration" data-value="31045893100">31.045</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.i_enter_password_as(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="60345722">0.060</td>
+              <td class="duration" data-value="60345722">0.092</td>
+              <td class="duration" data-value="543111500">0.543</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.i_enter_username_as(java.lang.String)</td>
+              <td>9</td>
+              <td class="duration" data-value="75897811">0.075</td>
+              <td class="duration" data-value="75897811">0.208</td>
+              <td class="duration" data-value="683080300">0.683</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.i_loggged_into_rediffmail_successfully()</td>
+              <td>9</td>
+              <td class="duration" data-value="12010011">0.012</td>
+              <td class="duration" data-value="12010011">0.051</td>
+              <td class="duration" data-value="108090100">0.108</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.launch_rediffmail_login()</td>
+              <td>17</td>
+              <td class="duration" data-value="2237000411">2.237</td>
+              <td class="duration" data-value="2237000411">5.390</td>
+              <td class="duration" data-value="38029007000">38.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.open_chrome_browser(java.lang.String)</td>
+              <td>18</td>
+              <td class="duration" data-value="1005107522">1.005</td>
+              <td class="duration" data-value="1005107522">1.742</td>
+              <td class="duration" data-value="18091935400">18.091</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.setUp(io.cucumber.java.Scenario)</td>
+              <td>18</td>
+              <td class="duration" data-value="999022">0.000</td>
+              <td class="duration" data-value="999022">0.004</td>
+              <td class="duration" data-value="17982400">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">parallel.StepDefs.teardown(io.cucumber.java.Scenario)</td>
+              <td>18</td>
+              <td class="duration" data-value="191729350">0.191</td>
+              <td class="duration" data-value="191729350">0.391</td>
+              <td class="duration" data-value="3451128300">3.451</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>114</td>
+            <td class="duration">0.892</td>
+            <td class="duration">38.029</td>
+            <td class="duration">1:41.734</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
